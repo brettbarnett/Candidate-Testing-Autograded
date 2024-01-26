@@ -65,7 +65,8 @@ function runProgram() {
   // TODO 1.1c: Greet candidate using their name //
    console.log("Hello", candidateName);
   askQuestion();
-  gradeQuiz(this.candidateAnswers);
+  let grade = gradeQuiz(this.candidateAnswers);
+  console.log(`Your Grade: ${grade}%`);
 }
 
 // ----------- Don't write any code or change any code below this line ---------- //
