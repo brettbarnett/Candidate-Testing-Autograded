@@ -67,6 +67,12 @@ function runProgram() {
   askQuestion();
   let grade = gradeQuiz(this.candidateAnswers);
   console.log(`Your Grade: ${grade}%`);
+  if (grade >= 80) {
+    console.log("Status: PASSED")
+  }
+  else {
+    console.log("Status: FAILED");
+  }
 }
 
 // ----------- Don't write any code or change any code below this line ---------- //
