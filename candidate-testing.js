@@ -20,7 +20,7 @@ let questions =
   "What is the minimum crew size for the ISS? "
 ];
 
-let correctAnswers = [ "Sally Ride", "true", "40", "Trajectory", "3"];
+let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 let candidateAnswers = [];
 
 
@@ -49,7 +49,13 @@ function gradeQuiz(candidateAnswers) {
   }
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
+  let correctAnswersCount = 0;
+  for (let i = 0; i < candidateAnswers.length; i++) {
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
+      correctAnswersCount++;
+    }
+  }
+  grade = (correctAnswersCount / correctAnswers.length) * 100;
 
   return grade;
 }
